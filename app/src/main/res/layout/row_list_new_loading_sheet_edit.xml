@@ -1,0 +1,174 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:id="@+id/ll_rlayout"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/ll_ll1"
+        android:gravity="left">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LR No."
+            android:layout_marginLeft="4dp"
+            android:textSize="12sp"
+            android:textColor="@color/colorBlack"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#5b97ea"
+            android:layout_weight="1"
+            android:id="@+id/row_list_new_lse_tv_lr_no"
+            android:layout_marginLeft="4dp"
+            android:hint="B01/A/TP/18/00001"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To Location:"
+            android:textSize="12sp"
+            android:textColor="@color/colorBlack"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#5b97ea"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"
+            android:hint="Hublie"
+            android:id="@+id/row_list_new_lse_tv_to_loc"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actual Qty."
+            android:textSize="12sp"
+            android:textColor="@color/colorBlack"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#5b97ea"
+            android:hint="123"
+            android:id="@+id/row_list_new_lse_tv_act_wt"
+
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/ll_ll2"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/ll_ll1"
+        android:gravity="left">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date:"
+            android:textSize="12sp"
+            android:layout_marginLeft="4dp"
+            android:textColor="@color/colorBlack"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:padding="2dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"
+            android:textColor="#5b97ea"
+            android:hint="12/12/2018"
+            android:id="@+id/row_list_new_lse_tv_date"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To Branch:"
+            android:textSize="12sp"
+
+            android:textColor="@color/colorBlack"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#5b97ea"
+            android:hint="Hublie"
+            android:id="@+id/row_list_new_lse_tv_to_branch"
+
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sending Qty."
+            android:textSize="12sp"
+
+            android:textColor="@color/colorBlack"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#5b97ea"
+            android:hint="123"
+            android:id="@+id/row_list_new_lse_tv_send_qty"
+
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/ll_ll3"
+        android:layout_marginRight="20dp"
+        android:gravity="right"
+        android:layout_below="@+id/ll_ll2"
+        android:layout_marginTop="6dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select"
+            android:id="@+id/row_list_new_lse_tv_select"
+
+            android:background="@drawable/bt_bg"
+            android:textSize="12sp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/colorBlack"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remove"
+            android:id="@+id/row_list_new_lse_tv_delete"
+            android:textSize="12sp"
+            android:background="@drawable/bt_bg"
+            android:textColor="@color/colorBlack"
+            />
+
+    </LinearLayout>
+</RelativeLayout>

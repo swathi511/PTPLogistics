@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <TextView android:id="@+id/avi_tv_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:text="Uploaded Image"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:background="@color/colorPrimaryDark"
+        android:textSize="15sp"
+        android:textColor="#ffffff"
+        android:textAllCaps="true"
+        android:textStyle="bold"/>
+
+    <ImageView android:id="@+id/avi_iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back"
+        android:layout_alignParentLeft="true"
+        android:padding="8dp"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/avi_iv_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="2dp"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"
+        android:layout_below="@+id/avi_tv_label"
+        />
+
+</RelativeLayout>

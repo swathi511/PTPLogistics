@@ -1,0 +1,166 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:id="@+id/ll_rlayout"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/ll_ll1"
+        android:gravity="left">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From Location "
+            android:textSize="10sp"
+            android:textColor="@color/colorBlack"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:padding="2dp"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:textColor="#5b97ea"
+            android:id="@+id/row_list_shiping_tv_from_loc"
+            android:hint="Bangalore wilson garden"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To Location"
+            android:textSize="10sp"
+            android:textColor="@color/colorBlack"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="#5b97ea"
+            android:layout_weight="1"
+            android:id="@+id/row_list_shiping_tv_to_loc"
+            android:layout_marginLeft="4dp"
+            android:hint="hunli-hubli Romb"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_ll1"
+        android:layout_marginTop="6dp"
+        android:gravity="left"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading No. "
+            android:textSize="10sp"
+            android:textColor="@color/colorBlack"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:padding="2dp"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:textColor="#5b97ea"
+            android:id="@+id/row_list_shiping_tv_loading_no"
+
+            android:hint="Bangalore wilson garden"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vehicle No"
+            android:textSize="10sp"
+            android:textColor="@color/colorBlack"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="#5b97ea"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"
+            android:hint="1234567890"
+            android:id="@+id/row_list_shiping_tv_veh_no"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_ll3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_ll2"
+        android:layout_marginTop="6dp"
+        android:gravity="left"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date "
+            android:textSize="10sp"
+            android:textColor="@color/colorBlack"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:padding="2dp"
+            android:layout_marginLeft="4dp"
+            android:textColor="#5b97ea"
+            android:hint="12/10/2018"
+            android:id="@+id/row_list_shiping_tv_date"
+
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time "
+            android:layout_marginLeft="4dp"
+            android:textSize="10sp"
+            android:textColor="@color/colorBlack"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:padding="2dp"
+            android:layout_marginLeft="4dp"
+            android:textColor="#5b97ea"
+            android:hint="12:10:20hrs"
+            android:id="@+id/row_list_shiping_tv_time"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LR status"
+            android:textSize="10sp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/colorBlack"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="#5b97ea"
+            android:layout_marginLeft="4dp"
+            android:id="@+id/row_list_shiping_tv_lr_status"
+            android:hint="Lr Bookied at wilson Garden"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+</RelativeLayout>

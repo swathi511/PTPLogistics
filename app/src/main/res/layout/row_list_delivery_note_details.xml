@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:id="@+id/ll_rlayout"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/ll_ll1"
+        android:gravity="left">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LR No. "
+            android:textSize="10sp"
+            android:textColor="@color/colorBlack"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:padding="2dp"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:id="@+id/row_list_delivery_note_tv_lr_no"
+            android:textColor="#5b97ea"
+            android:hint="kjhfwfhrweuion2133"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Act Quantity."
+            android:textSize="10sp"
+            android:textColor="@color/colorBlack"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="#5b97ea"
+            android:layout_weight="1"
+            android:id="@+id/row_list_delivery_note_tv_act_qun"
+            android:layout_marginLeft="4dp"
+            android:hint="123"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_ll1"
+        android:layout_marginTop="6dp"
+        android:gravity="left"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Article."
+            android:textSize="10sp"
+            android:textColor="@color/colorBlack"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:padding="2dp"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:textColor="#5b97ea"
+            android:id="@+id/row_list_delivery_note_tv_article"
+            android:hint="Bangalore wilson garden"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rec Quantity"
+            android:textSize="10sp"
+            android:textColor="@color/colorBlack"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="#5b97ea"
+            android:id="@+id/row_list_delivery_note_tv_rec_qunt"
+
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"
+            android:hint="1234567890"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:background="@color/colorAshLight"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="32dp"
+        android:paddingTop="10dp"
+        android:paddingRight="32dp"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search Type"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:layout_weight="2"
+            android:gravity="left"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   :"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="10dp"/>
+
+
+        <Spinner
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="left"
+            android:id="@+id/dno_sp_search_type"
+            android:background="@drawable/spinner_bg"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="32dp"
+        android:paddingBottom="15dp"
+        android:paddingRight="32dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Booking Source"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:layout_weight="2"
+            android:gravity="left"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   :"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="10dp"/>
+
+        <Spinner
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="left"
+            android:id="@+id/dno_sp_booking_source"
+            android:background="@drawable/spinner_bg"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:paddingBottom="15dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LR No"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:layout_weight="2"
+            android:gravity="left"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   :"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="10dp"/>
+
+        <Spinner
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="left"
+            android:id="@+id/dno_sp_lr_no"
+            android:background="@drawable/spinner_bg"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:paddingBottom="15dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dispatch Type"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:layout_weight="2"
+            android:gravity="left"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   :"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="10dp"/>
+        <Spinner
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="left"
+            android:id="@+id/dno_sp_dispatch_type"
+
+            android:background="@drawable/spinner_bg"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:paddingBottom="15dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delivery Type"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:layout_weight="2"
+            android:gravity="left"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   :"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="10dp"/>
+
+        <Spinner
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="left"
+            android:id="@+id/dno_sp_delivery_type"
+            android:background="@drawable/spinner_bg"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:paddingBottom="15dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LR Type"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:layout_weight="2"
+            android:gravity="left"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   :"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="10dp"/>
+        <Spinner
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="left"
+            android:id="@+id/dno_sp_lr_type"
+            android:background="@drawable/spinner_bg"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:paddingBottom="10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:layout_weight="2"
+            android:gravity="left"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   :"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="10dp"/>
+
+        <Spinner
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="left"
+            android:id="@+id/dno_sp_status"
+            android:background="@drawable/spinner_bg"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:paddingBottom="15dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From Location"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:layout_weight="2"
+            android:gravity="left"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   :"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="10dp"/>
+
+        <Spinner
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="left"
+            android:id="@+id/dno_sp_from_loc"
+            android:background="@drawable/spinner_bg"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:paddingBottom="15dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To Location"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:layout_weight="2"
+            android:gravity="left"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   :"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="10dp"/>
+
+        <Spinner
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="left"
+            android:id="@+id/dno_sp_to_loc"
+            android:background="@drawable/spinner_bg"
+            />
+    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="15dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Tariff"
+                    android:textSize="14sp"
+                    android:textColor="#000000"
+                    android:layout_weight="2"
+                    android:gravity="left"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="   :"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="10dp"/>
+
+                <Spinner
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="left"
+                    android:id="@+id/dno_sp_select_tarif"
+
+                    android:background="@drawable/spinner_bg"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="15dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cal Criteria"
+                    android:textSize="14sp"
+                    android:textColor="#000000"
+                    android:layout_weight="2"
+                    android:gravity="left"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="   :"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="10dp"/>
+
+                <Spinner
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="left"
+                    android:id="@+id/dno_sp_cal_criteria"
+
+                    android:background="@drawable/spinner_bg"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="15dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Door Delivery"
+                    android:textSize="14sp"
+                    android:textColor="#000000"
+                    android:layout_weight="2"
+                    android:gravity="left"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="   :"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="10dp"/>
+
+                <Spinner
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="left"
+                    android:id="@+id/dno_sp_door_delivery"
+
+                    android:background="@drawable/spinner_bg"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="LR No"
+                    android:textSize="14sp"
+                    android:inputType="text"
+                    android:textColor="#000000"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:id="@+id/dno_et_lr_no"
+
+                    android:padding="4dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/bg_dark"
+                    android:maxLines="2"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="LR Date"
+                    android:textSize="14sp"
+                    android:textColor="#000000"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:padding="4dp"
+                    android:id="@+id/dno_tv_lr_date"
+
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/bg_dark"
+                    android:maxLines="2"/>
+
+
+            </LinearLayout>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="32dp"
+       android:layout_marginRight="32dp"
+       android:layout_marginTop="10dp"
+       android:orientation="horizontal">
+
+
+       <EditText
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:hint="Sender name"
+           android:textSize="14sp"
+           android:inputType="text"
+           android:textColor="#000000"
+           android:layout_weight="1"
+           android:gravity="left"
+           android:padding="4dp"
+
+           android:layout_marginRight="10dp"
+           android:id="@+id/dno_et_sender_name"
+           android:background="@drawable/bg_dark"
+           android:maxLines="2"/>
+       <EditText
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:hint="Receiver name"
+           android:textSize="14sp"
+           android:inputType="text"
+           android:textColor="#000000"
+           android:layout_weight="1"
+           android:gravity="left"
+           android:padding="4dp"
+           android:layout_marginLeft="10dp"
+           android:id="@+id/dno_et_receiver_name"
+           android:background="@drawable/bg_dark"
+           android:maxLines="2"/>
+
+
+   </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="32dp"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Sender mobile"
+                    android:textSize="14sp"
+                    android:inputType="number"
+                    android:textColor="#000000"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:id="@+id/dno_et_sender_mobile"
+
+                    android:padding="4dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/bg_dark"
+                    android:maxLines="2"/>
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Receiver mobile"
+                    android:textSize="14sp"
+                    android:inputType="text"
+                    android:textColor="#000000"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:id="@+id/dno_et_receiver_mobile"
+
+                    android:padding="4dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/bg_dark"
+                    android:maxLines="2"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="32dp"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Sender address"
+                    android:textSize="14sp"
+                    android:inputType="text"
+                    android:textColor="#000000"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:padding="4dp"
+                    android:id="@+id/dno_et_sender_address"
+
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/bg_dark"
+                    android:maxLines="2"/>
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Receiver address"
+                    android:textSize="14sp"
+                    android:inputType="text"
+                    android:textColor="#000000"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:id="@+id/dno_et_receiver_address"
+
+                    android:padding="4dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/bg_dark"
+                    android:maxLines="2"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="32dp"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Cust Inv No"
+                    android:textSize="14sp"
+                    android:inputType="number"
+                    android:textColor="#000000"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:id="@+id/dno_et_cust_inv_no"
+
+                    android:padding="4dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/bg_dark"
+                    android:maxLines="2"/>
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Goods Value"
+                    android:textSize="14sp"
+                    android:inputType="number"
+                    android:textColor="#000000"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:padding="4dp"
+                    android:id="@+id/dno_et_goods_value"
+
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/bg_dark"
+                    android:maxLines="2"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dno_cb_sms_sender"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14dp"
+                    android:layout_marginRight="10dp"
+                    android:text="SMS to Sender"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:id="@+id/dno_cb_sms_receiver"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="SMS to Receiver"/>
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bt_bg"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:id="@+id/dno_tv_next"
+                android:layout_marginRight="24dp"
+                android:textSize="14sp"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:fontFamily="sans-serif-condensed"
+                android:textAllCaps="true"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

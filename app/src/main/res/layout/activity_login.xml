@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@+id/al_clayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:background="@color/colorlightAsh"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+  >
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/al_ll"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:id="@+id/linearLayout">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo"/>
+
+        </LinearLayout>
+        <LinearLayout android:id="@+id/al_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:padding="10dp">
+            <EditText
+                android:id="@+id/al_et_uname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="User Name"
+                android:layout_margin="10dp"
+                android:padding="12dp"
+                android:background="@drawable/login_bg"
+                android:textColorHint="#000000"
+                android:inputType="textEmailAddress"
+                android:drawableRight="@drawable/uuser"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"/>
+            <EditText
+                android:id="@+id/al_et_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:background="@drawable/login_bg"
+                android:layout_margin="10dp"
+                android:padding="12dp"
+                android:textColorHint="#000000"
+                android:inputType="textPassword"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                android:drawableRight="@drawable/pass"/>
+
+
+            <Button android:id="@+id/al_bt_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="login"
+                android:padding="12dp"
+                android:layout_margin="10dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="15sp"
+                android:background="#F9A825"
+                android:layout_alignParentBottom="true"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

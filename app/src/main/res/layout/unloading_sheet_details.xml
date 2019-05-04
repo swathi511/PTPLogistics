@@ -1,0 +1,370 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAshLight"
+   >
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="30dp"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:gravity="center"-->
+        <!--android:background="@color/colorAccent"-->
+        <!--android:id="@+id/usd_tv_un_loading"-->
+        <!--android:text="Unloading Sheet"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textColor="@color/colorBlack"-->
+        <!--android:textSize="16sp" />-->
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="30dp"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_marginRight="16dp"-->
+        <!--android:background="@color/colorAccent"-->
+        <!--android:gravity="center"-->
+        <!--android:id="@+id/usd_tv_new_home"-->
+        <!--android:text="Home"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textColor="@color/colorBlack"-->
+        <!--android:textSize="16sp" />-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Date Criteria"
+                android:textSize="14sp"
+                android:textColor="@color/colorBlack"
+                android:layout_weight="2"
+                android:gravity="left"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"/>
+
+
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="xxx"
+                android:id="@+id/usd_et_date_criteria"
+                android:textSize="14sp"
+                android:inputType="text"
+                android:textColor="#000000"
+                android:layout_weight="2"
+                android:gravity="left"
+                android:padding="4dp"
+                android:background="@drawable/et_bg"
+                android:maxLines="2"/>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:layout_marginTop="15dp"
+
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Vehicle No"
+                android:textSize="14sp"
+                android:textColor="@color/colorBlack"
+                android:layout_weight="2"
+                android:gravity="left"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"/>
+
+
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="xxx"
+                android:textSize="14sp"
+                android:id="@+id/usd_et_vehicle_no"
+                android:inputType="text"
+                android:textColor="#000000"
+                android:layout_weight="2"
+                android:gravity="left"
+                android:padding="4dp"
+                android:background="@drawable/bg_dark"
+                android:maxLines="2"/>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:layout_marginTop="15dp"
+
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Dispatched Km"
+                android:textSize="14sp"
+                android:textColor="@color/colorBlack"
+                android:layout_weight="2"
+                android:gravity="left"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"/>
+
+
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="xxx"
+                android:textSize="14sp"
+                android:id="@+id/usd_et_dispatch_km"
+
+                android:inputType="number"
+                android:textColor="#000000"
+                android:layout_weight="2"
+                android:gravity="left"
+                android:padding="4dp"
+                android:background="@drawable/bg_dark"
+                android:maxLines="2"/>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:layout_marginTop="15dp"
+
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Dispatch Nos."
+                android:textSize="14sp"
+                android:layout_gravity="center"
+                android:textColor="@color/colorBlack"
+                android:layout_weight="2"
+                android:gravity="left"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"/>
+
+            <Spinner
+
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:id="@+id/usd_sp_dispacth_nos"
+                android:background="@drawable/spinner_bg"
+
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:layout_marginTop="15dp"
+
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:textSize="14sp"
+                android:layout_gravity="center"
+                android:textColor="@color/colorBlack"
+                android:layout_weight="2"
+                android:gravity="left"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"/>
+
+            <Spinner
+
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:id="@+id/usd_sp_time"
+
+                android:background="@drawable/spinner_bg"
+
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:layout_marginTop="15dp"
+
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Unloading By"
+                android:textSize="14sp"
+                android:textColor="@color/colorBlack"
+                android:layout_weight="2"
+                android:gravity="left"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"/>
+
+
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="xxx"
+                android:textSize="14sp"
+                android:inputType="text"
+                android:id="@+id/usd_et_unloading_by"
+
+                android:textColor="#000000"
+                android:layout_weight="2"
+                android:gravity="left"
+                android:padding="4dp"
+                android:background="@drawable/et_bg"
+                android:maxLines="2"/>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:layout_marginTop="15dp"
+
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="vehicle KM"
+                android:textSize="14sp"
+                android:textColor="@color/colorBlack"
+                android:layout_weight="2"
+                android:gravity="left"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"/>
+
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="xxx"
+                android:id="@+id/usd_et_vehicle_kms"
+
+                android:textSize="14sp"
+                android:inputType="number"
+                android:textColor="#000000"
+                android:layout_weight="2"
+                android:gravity="left"
+                android:padding="4dp"
+                android:background="@drawable/et_bg"
+                android:maxLines="2"/>
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Load"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bt_bg"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:id="@+id/usd_tv_load"
+
+            android:layout_marginRight="16dp"
+            android:textSize="14sp"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:fontFamily="sans-serif-condensed"
+            android:textAllCaps="true"/>
+
+    </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

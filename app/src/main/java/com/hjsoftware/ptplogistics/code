@@ -1,0 +1,933 @@
+Attachment NewLrBookingOneFragment.java added.
+Conversation opened. 1 read message.
+
+Skip to content
+Using Hj Software Mail with screen readers
+2 of 769
+
+PTP LR Booking Calculation file- Booking screenshot.
+Inbox
+	x
+Santosh A
+
+AttachmentsSep 3 (1 day ago)
+
+to me
+Hi
+
+PTP LR Booking Calculation file- Booking screenshot.
+2 Attachments
+
+Click here to Reply or Forward
+3.2 GB (21%) of 15 GB used
+Manage
+Program Policies
+Powered by
+Google
+Last account activity: 1 hour ago
+Details
+
+
+
+public bool Charges_calculation(Double TotalWeight_P, Double TotalQty_P)
+        {
+            bool IsTrue = true;
+            try
+            {
+                string[] FromLocWitchBranch = ddlFromLoc.SelectedValue.ToString().Split(new char[] { '-' });
+                string FromLoc = FromLocWitchBranch[0];
+                string[] ToLocWithBranch = htoloc.Value.Split(new char[] { '-' });
+                string ToLoc = ToLocWithBranch[0];
+
+                DataTable dtstax = ObjDataAccess1.GetGst(Convert.ToDateTime(txtLRDate.Text), FromLoc, ToLoc);
+
+                if (dtstax != null && dtstax.Rows.Count > 0)
+                {
+                    hstax.Value = dtstax.Rows[0]["sgst"].ToString();
+                    hcgst.Value = dtstax.Rows[0]["staxperc"].ToString();
+                    higst.Value = dtstax.Rows[0]["igst"].ToString();
+                }
+                else
+                {
+                    hstax.Value = "0";
+                    hcgst.Value = "0";
+                    higst.Value = "0";
+                }
+
+                Double NewDDCharges = 0;
+                Double OldDDCharges = 0;
+                if (ddldoor.SelectedItem.Text == "Required")
+                {
+                    if (txtddcharges.Text == "")
+                    {
+                        NewDDCharges = 0;
+                    }
+                    else
+                    {
+                        NewDDCharges = Convert.ToDouble(txtddcharges.Text);
+                    }
+                    if (txtoldddcharges.Text == "")
+                    {
+                        OldDDCharges = 0;
+                    }
+                    else
+                    {
+                        OldDDCharges = Convert.ToDouble(txtoldddcharges.Text);
+                    }
+
+                    if (NewDDCharges < OldDDCharges)
+                    {
+                        lblmessage.Text = "Sorry! You can not enter New DD Charges less than Old DD charges...";
+                        lblmessage.Visible = true;
+                        IsTrue = false;
+                        return IsTrue;
+                    }
+                }
+
+                Double c, x, y, z, n, d, e, f, g, h, i, r, t, disc, stax = 0.00, cgst = 0.00, igst = 0.00, s, u, v;
+
+                Double amnt = 0.00; Double totqty_hmchrgs = 0, totqty_artchrgs = 0, totqty_surchrgs = 0,
+                    total_weight = 0, totalqty_ddcharges = 0;
+
+                amnt = Convert.ToDouble(txtSubTotal.Text);
+
+                if ((ddlsender.SelectedItem.Text != "Other Sender"))
+                {
+                    //Start
+                    string customername = ddlsender.SelectedItem.Text;
+                    DataTable dtcustomerdet = objDataAccess.getCustomerDetailsbyname(customername);
+                    if (dtcustomerdet != null && dtcustomerdet.Rows.Count > 0)
+                    {
+                        srvtax = dtcustomerdet.Rows[0]["servicetax"].ToString();
+                        plrvalue = dtcustomerdet.Rows[0]["plrvalue"].ToString();
+                        hdminweight.Value = dtcustomerdet.Rows[0]["minarticlecharges"].ToString();
+                        hddoordelstat.Value = dtcustomerdet.Rows[0]["doordelvstatus"].ToString();
+                        hddoordelchrgs.Value = dtcustomerdet.Rows[0]["doordelvcharges"].ToString();
+                        hdminddchrgs.Value = dtcustomerdet.Rows[0]["mindoordelvcharges"].ToString();
+                        hdvaluesurchrgstat.Value = dtcustomerdet.Rows[0]["valuesurchargestatus"].ToString();
+                        hdvaluesurchrg.Value = dtcustomerdet.Rows[0]["valuesurcharge"].ToString();
+                        hduptoamt.Value = dtcustomerdet.Rows[0]["uptors"].ToString();
+                        hdabvamt.Value = dtcustomerdet.Rows[0]["aboveamount"].ToString();
+                        hdabvamtchrgs.Value = dtcustomerdet.Rows[0]["aboveamtcharges"].ToString();
+                        hdabvperamt.Value = dtcustomerdet.Rows[0]["aboveperamount"].ToString();
+                        hpodchrgstatus.Value = dtcustomerdet.Rows[0]["podchrgsstatus"].ToString();
+                        hpodcharges.Value = dtcustomerdet.Rows[0]["podcharges"].ToString();
+                        hdoordlvdeductst.Value = dtcustomerdet.Rows[0]["doordlvdeductstat"].ToString();
+                        if (hddoordelstat.Value.ToString() == "Applicable")
+                        {
+                            ddldoor.SelectedIndex = Helper.getDropDownIndex(ddldoor, "Required");
+                            ddldoor.Enabled = false;
+
+                        }
+                        else
+                        {
+                            //hdoordlvdeductst.Value = "";
+                        }
+
+                        if (hdvaluesurchrgstat.Value.ToString() == "Applicable")
+                        {
+                            ddlvaluesurchrgstat.SelectedIndex = Helper.getDropDownIndex(ddlvaluesurchrgstat, "Applicable");
+                            ddlvaluesurchrgstat.Enabled = false;
+                        }
+                        else
+                        {
+                            ddlvaluesurchrgstat.SelectedIndex = Helper.getDropDownIndex(ddlvaluesurchrgstat, "Not Applicable");
+                        }
+                        if (ddltartiffcri.SelectedItem.Text == "Regular Based")
+                        {
+                            lrchg = dtcustomerdet.Rows[0]["lrchg"].ToString();
+                            ariclechg = dtcustomerdet.Rows[0]["ariclechg"].ToString();
+                            txtLrcharges.Text = dtcustomerdet.Rows[0]["lrcharges"].ToString();
+                            hdartchrgs.Value = dtcustomerdet.Rows[0]["articlecharges"].ToString();
+                            string WithpassStatus = dtcustomerdet.Rows[0]["withpassstatus"].ToString();
+                            if (WithpassStatus == "Applicable")
+                            {
+                                ddllrpass.SelectedIndex = Helper.getDropDownIndex(ddllrpass, "Required");
+                            }
+                            else
+                            {
+
+                                ddllrpass.SelectedIndex = Helper.getDropDownIndex(ddllrpass, "Not Required");
+                            }
+                            hdwithpasscharges.Value = dtcustomerdet.Rows[0]["withpasscharges"].ToString();
+                        }
+                        else
+                        {
+                            lrchg = dtcustomerdet.Rows[0]["lrchargesstatusart"].ToString();
+                            ariclechg = dtcustomerdet.Rows[0]["articlechrgsstatusart"].ToString();
+                            txtLrcharges.Text = dtcustomerdet.Rows[0]["lrchargesart"].ToString();
+                            hdartchrgs.Value = dtcustomerdet.Rows[0]["articlechargesart"].ToString();
+                            string WithpassStatus = dtcustomerdet.Rows[0]["withpassstatusart"].ToString();
+                            if (WithpassStatus == "Applicable")
+                            {
+                                ddllrpass.SelectedIndex = Helper.getDropDownIndex(ddllrpass, "Required");
+                            }
+                            else
+                            {
+                                ddllrpass.SelectedIndex = Helper.getDropDownIndex(ddllrpass, "Not Required");
+                            }
+                            hdwithpasscharges.Value = dtcustomerdet.Rows[0]["withpasschargesart"].ToString();
+                        }
+                        if (ddltartiffcri.SelectedItem.Text == "Article Based")
+                        {
+                            hamalichr = dtcustomerdet.Rows[0]["hamalicharges"].ToString();
+                            hdhmlichrgs.Value = dtcustomerdet.Rows[0]["rate"].ToString();
+                            hdsurchrgstat.Value = dtcustomerdet.Rows[0]["surchargestatusart"].ToString();
+                            hdsurchrgs.Value = dtcustomerdet.Rows[0]["surcharges"].ToString();
+                        }
+                        else
+                        {
+                            hamalichr = dtcustomerdet.Rows[0]["hmlcriteriaregular"].ToString();
+                            hdhmlichrgs.Value = dtcustomerdet.Rows[0]["hmchrgsregular"].ToString();
+                            hdsurchrgstat.Value = dtcustomerdet.Rows[0]["surchargestatusreg"].ToString();
+                            hdsurchrgs.Value = dtcustomerdet.Rows[0]["surchargesregular"].ToString();
+                        }
+                    }
+
+                    //End
+
+                    if (hdvaluesurchrgstat.Value == "Applicable")
+                    {
+                        if (txtgoodsvalue.Text != "" && txtgoodsvalue.Text != "0")
+                        {
+
+                        }
+                        else
+                        {
+                            lblmessage.Text = "Please Enter Goods Value...!";
+                            lblmessage.Visible = true;
+                            txtgoodsvalue.Focus();
+                            IsTrue = false;
+                            return IsTrue;
+
+                        }
+                    }
+                    if (ariclechg == "Applicable")
+                    {
+                        //Label lblQty = (Label)grdGoods.Rows[j].FindControl("lblQty");
+                        //int amnt2 = int.Parse(lblQty.Text);
+                        //totqty_artchrgs = (totqty_artchrgs + amnt2);
+                        totqty_artchrgs = TotalQty_P;
+                        Double Articlechrg = Convert.ToInt32(hdartchrgs.Value);
+                        Double articlechg = totqty_artchrgs * Articlechrg;
+                        txtartchg.Text = articlechg.ToString();
+                    }
+                    else
+                    {
+                        txtartchg.Text = "0";
+                    }
+
+                    if (lrchg == "Applicable")
+                    {
+                        //txtLrcharges.Text = "20";
+                    }
+                    else
+                    {
+                        txtLrcharges.Text = "0";
+                    }
+                    if (hamalichr == "Applicable")
+                    {
+                        //Label lblQty = (Label)grdGoods.Rows[j].FindControl("lblQty");
+                        //int amnt2 = int.Parse(lblQty.Text);
+                        totqty_hmchrgs = TotalQty_P; //(totqty_hmchrgs + amnt2);
+                        Double hamalicharges = Convert.ToInt32(hdhmlichrgs.Value);
+                        Double TotalHchrges = totqty_hmchrgs * hamalicharges;
+                        txthmalicharges.Text = TotalHchrges.ToString();
+                    }
+                    else
+                    {
+                        txthmalicharges.Text = "0";
+                    }
+                    if (hdsurchrgstat.Value == "Applicable")
+                    {
+                        //Label lblQty = (Label)grdGoods.Rows[j].FindControl("lblQty");
+                        if (ddltartiffcri.SelectedItem.Text == "Article Based")
+                        {
+                            if (ddlLRType.SelectedItem.Text == "ON A/C")
+                            {
+                                //int amnt2 = int.Parse(lblQty.Text);
+                                totqty_surchrgs = TotalQty_P; //totqty_surchrgs + amnt2);
+                                Double Surchrgs = Convert.ToInt32(hdsurchrgs.Value);
+                                Double totsurchrgs = totqty_surchrgs * Surchrgs;
+                                txtsurchg.Text = totsurchrgs.ToString();
+                            }
+                            else
+                            {
+                                txtsurchg.Text = "0";
+                            }
+                        }
+                        else
+                        {
+                            int surcharges = Convert.ToInt32(hdsurchrgs.Value);
+                            Double totsurcharges = (amnt * surcharges) / 100;
+                            txtsurchg.Text = totsurcharges.ToString();
+
+                        }
+
+                    }
+                    else
+                    {
+                        txtsurchg.Text = "0";
+
+                    }
+
+                    if (hddoordelstat.Value == "Applicable")
+                    {
+                        if (hdoordlvdeductst.Value.ToString() == "Actual")
+                        {
+                            //Label lblQty = (Label)grdGoods.Rows[j].FindControl("lblQty");
+                            //int amnt2 = int.Parse(lblQty.Text);
+                            totalqty_ddcharges = TotalQty_P;//(totalqty_ddcharges + amnt2);
+                            Double DDcharges = Convert.ToInt32(hddoordelchrgs.Value);
+                            Double totalDDcharges = totalqty_ddcharges * DDcharges;
+                            Double minddcharges = Convert.ToInt32(hdminddchrgs.Value);
+                            int New_DDCharges = 0;
+                            if (txtddcharges.Text == "")
+                            {
+                                New_DDCharges = 0;
+                                txtddcharges.Text = "0";
+                            }
+                            else
+                            {
+                                New_DDCharges = Convert.ToInt32(txtddcharges.Text);
+                            }
+                            //New_DDCharges = Convert.ToInt32(txtddcharges.Text);
+                            if (totalDDcharges < minddcharges)
+                            {
+                                if (New_DDCharges < minddcharges)
+                                {
+                                    txtddcharges.Text = hdminddchrgs.Value.ToString();
+                                }
+                                else
+                                {
+                                    txtddcharges.Text = New_DDCharges.ToString();
+                                }
+                            }
+                            else
+                            {
+                                if (New_DDCharges < totalDDcharges)
+                                {
+                                    txtddcharges.Text = totalDDcharges.ToString();
+                                }
+                                else
+                                {
+                                    txtddcharges.Text = New_DDCharges.ToString();
+                                }
+
+                            }
+                        }
+                        else
+                        {
+                            //Label lblQty = (Label)grdGoods.Rows[j].FindControl("lblQty");
+                            //int amnt2 = int.Parse(lblQty.Text);
+                            totalqty_ddcharges = TotalQty_P; //(totalqty_ddcharges + amnt2);
+                            Double DDcharges = Convert.ToInt32(hddoordelchrgs.Value);
+                            Double totalDDcharges = totalqty_ddcharges * DDcharges;
+                            Double minddcharges = Convert.ToInt32(hdminddchrgs.Value);
+                            Double Subtotal = 0;
+                            if (txtSubTotal.Text != "")
+                            {
+                                Subtotal = Convert.ToDouble(txtSubTotal.Text);
+                            }
+
+                            int New_DDCharges = 0;
+                            if (txtddcharges.Text == "")
+                            {
+                                New_DDCharges = 0;
+                                txtddcharges.Text = "0";
+                            }
+                            else
+                            {
+                                New_DDCharges = Convert.ToInt32(txtddcharges.Text);
+                            }
+
+                            if (New_DDCharges < totalDDcharges)
+                            {
+                                txtddcharges.Text = totalDDcharges.ToString();
+                            }
+                            else
+                            {
+                                txtddcharges.Text = New_DDCharges.ToString();
+                            }
+
+                            //New_DDCharges = Convert.ToInt32(txtddcharges.Text);
+                            //if (totalDDcharges < minddcharges)
+                            //{
+                            //    txtddcharges.Text = hdminddchrgs.Value.ToString();
+                            //}
+                            //else
+                            //{
+                            double OldFreightamt = Convert.ToDouble(txtoldbasic.Text);
+                            txtoldbasic.Text = (OldFreightamt - totalDDcharges).ToString();
+
+                            txtSubTotal.Text = (Subtotal - totalDDcharges).ToString();
+
+
+                        }
+                    }
+                    else
+                    {
+                        txtddcharges.Enabled = true;
+                        if (hdoordlvdeductst.Value.ToString() == "Actual")
+                        {
+                            int New_DDCharges = 0;
+                            if (txtddcharges.Text == "")
+                            {
+                                New_DDCharges = 0;
+                                txtddcharges.Text = "0";
+                            }
+                            else
+                            {
+                                New_DDCharges = Convert.ToInt32(txtddcharges.Text);
+                            }
+
+                        }
+                        else
+                        {
+                            Double Subtotal = 0;
+                            if (txtSubTotal.Text != "")
+                            {
+                                Subtotal = Convert.ToDouble(txtSubTotal.Text);
+                            }
+
+                            int New_DDCharges = 0;
+                            if (txtddcharges.Text == "")
+                            {
+                                New_DDCharges = 0;
+                                txtddcharges.Text = "0";
+                            }
+                            else
+                            {
+                                New_DDCharges = Convert.ToInt32(txtddcharges.Text);
+                            }
+
+
+                            txtddcharges.Text = New_DDCharges.ToString();
+
+
+
+                            double OldFreightamt = Convert.ToDouble(txtoldbasic.Text);
+                            txtoldbasic.Text = (OldFreightamt - New_DDCharges).ToString();
+
+                            txtSubTotal.Text = (Subtotal - New_DDCharges).ToString();
+                        }
+                        lblagentDDcharges.Visible = true;
+                        txtagrntddchrgs.Visible = true;
+                    }
+                    if (ddllrpass.SelectedItem.Text == "Required")
+                    {
+                        txtlrpass.Text = hdwithpasscharges.Value.ToString();
+                        ddllrpass.Enabled = false;
+                        txtlrpass.Enabled = false;
+
+                    }
+                    else
+                    {
+                        ddllrpass.Enabled = false;
+                        txtlrpass.Enabled = false;
+                    }
+
+
+
+                    if (hdvaluesurchrgstat.Value == "Applicable")
+                    {
+                        if (txtgoodsvalue.Text != "" && txtgoodsvalue.Text != "0")
+                        {
+                            int uptoamt = Convert.ToInt32(hduptoamt.Value);
+                            int valuesurchrg = Convert.ToInt32(hdvaluesurchrg.Value);
+                            int aboveamt = Convert.ToInt32(hdabvamt.Value);
+                            int aboveamtchrgs = Convert.ToInt32(hdabvamtchrgs.Value);
+                            int aboveperamt = Convert.ToInt32(hdabvperamt.Value);
+                            int GoodsValues = Convert.ToInt32(txtgoodsvalue.Text);
+                            if (GoodsValues < uptoamt)
+                            {
+                                txtvaluesurchrg.Text = valuesurchrg.ToString();
+                            }
+                            else
+                            {
+                                Double ExtraAmt = ((GoodsValues - uptoamt) / aboveperamt);
+                                Double ExtraRate = valuesurchrg + ExtraAmt;
+                                txtvaluesurchrg.Text = ExtraRate.ToString();
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    if (ddlsender.SelectedItem.Text == "Other Sender")
+                    {
+                        string[] ToLocationID3Split = htoloc.Value.Split(new char[] { '-' });
+                        string ToLocationID3 = ToLocationID3Split[0];
+                        string[] FromLocationIdsplit = ddlFromLoc.SelectedValue.ToString().Split(new char[] { '-' });
+                        string FromLocationId = FromLocationIdsplit[0];
+                        /// string tolocid1 = fromlocid.Substring(0, fromlocid.IndexOf("-"));
+                        DataSet ds = objDataAccess.getcharges(FromLocationId);
+                        DataTable dtcharges = ds.Tables[0];
+
+                        lrchg = dtcharges.Rows[0]["LrCharges"].ToString();
+                        ariclechg = dtcharges.Rows[0]["ArticleCharges"].ToString();
+                        txtLrcharges.Text = dtcharges.Rows[0]["lramount"].ToString();
+                        hdartchrgs.Value = dtcharges.Rows[0]["articleamount"].ToString();
+                        hamalichr = dtcharges.Rows[0]["hamalichrcriteria"].ToString();
+                        hdhmlichrgs.Value = dtcharges.Rows[0]["hamalicharges"].ToString();
+                        hdminweight.Value = dtcharges.Rows[0]["minimumweight"].ToString();
+                        hdperkgs.Value = dtcharges.Rows[0]["perkgs"].ToString();
+                        DataTable dtsurcharges = ds.Tables[1];
+                        hdsurchrgs.Value = dtsurcharges.Rows[0]["surcharges"].ToString();
+                        if (hLrWithpassStatus.Value == "")
+                        {
+                            hLrWithpassStatus.Value = "Required";
+                        }
+                        if (hLrWithpassStatus.Value == "Required")
+                        {
+                            DataTable dtlrpass = objinv.M_GetLrpassandSurcharges();
+                            if (dtlrpass != null && dtlrpass.Rows.Count > 0)
+                            {
+                                txtlrpass.Text = dtlrpass.Rows[0]["lrpasscharge"].ToString();
+
+                            }
+                            else
+                            {
+                                txtlrpass.Text = "0";
+                            }
+
+                            ddllrpass.SelectedIndex = Helper.getDropDownIndex(ddllrpass, "Required");
+                        }
+                        else
+                        {
+                            ddllrpass.SelectedIndex = Helper.getDropDownIndex(ddllrpass, "Not Required");
+                            txtlrpass.Text = "0";
+                        }
+
+                        if (lrchg == "Applicable")
+                        {
+                            //txtLrcharges.Text = "20";
+                        }
+                        else
+                        {
+                            txtLrcharges.Text = "0";
+                        }
+                        if (ariclechg == "Applicable")
+                        {
+                            //Label lblQty = (Label)grdGoods.Rows[j].FindControl("lblQty");
+                            //int amnt2 = int.Parse(lblQty.Text);
+                            totqty_artchrgs = TotalQty_P; //(totqty_artchrgs + amnt2);
+                            Double Articlechrg = Convert.ToInt32(hdartchrgs.Value);
+                            Double articlechg = totqty_artchrgs * Articlechrg;
+                            txtartchg.Text = articlechg.ToString();
+                        }
+                        else
+                        {
+                            txtartchg.Text = "0";
+                        }
+                        if (hamalichr == "Applicable")
+                        {
+                            //Label lblweight = (Label)grdGoods.Rows[j].FindControl("lblWeight");
+                            //int Tweight = int.Parse(lblweight.Text);
+                            total_weight = TotalWeight_P; //(total_weight + Tweight);
+                            if (total_weight >= 100)
+                            {
+                                Double hamalicharges = Convert.ToInt32(hdhmlichrgs.Value);
+                                Double perkgs = Convert.ToInt32(hdperkgs.Value);
+                                Double charges = total_weight / perkgs;
+                                Double TotalHchrges = hamalicharges * charges;
+                                txthmalicharges.Text = TotalHchrges.ToString(); //hdhmlichrgs.Value.ToString();
+                            }
+                            else
+                            {
+                                txthmalicharges.Text = "10";
+                            }
+
+                        }
+                        else
+                        {
+                            txthmalicharges.Text = "0";
+
+                        }
+                        if (hdsurchrgs.Value != "" || hdsurchrgs.Value == "0")
+                        {
+                            //Label lblQty = (Label)grdGoods.Rows[j].FindControl("lblQty");
+                            if (ddltartiffcri.SelectedItem.Text == "Article Based")
+                            {
+                                if (ddlLRType.SelectedItem.Text == "ON A/C")
+                                {
+                                    //int amnt2 = int.Parse(lblQty.Text);
+                                    totqty_surchrgs = TotalQty_P; //(totqty_surchrgs + amnt2);
+                                    Double Surchrgs = Convert.ToInt32(hdsurchrgs.Value);
+                                    Double totsurchrgs = totqty_surchrgs * Surchrgs;
+                                    txtsurchg.Text = totsurchrgs.ToString();
+                                }
+                                else
+                                {
+                                    txtsurchg.Text = "0";
+                                }
+                            }
+                            else
+                            {
+                                int surcharges = Convert.ToInt32(hdsurchrgs.Value);
+                                Double totsurcharges = (amnt * surcharges) / 100;
+                                txtsurchg.Text = totsurcharges.ToString();
+                            }
+                        }
+                        else
+                        {
+                            txtsurchg.Text = "0";
+
+                        }
+                    }
+
+                }
+
+                if (amnt > 750)
+                {
+                    if (txtconsignorGST.Text == "" && txtconsigneeGST.Text == "")
+                    {
+                        if ((ddlsender.SelectedItem.Text != "Other Sender"))
+                        {
+                            if (ddltartiffcri.SelectedItem.Text == "Article Based")
+                            {
+                                if (ddlLRType.SelectedItem.Text == "ON A/C")
+                                {
+                                    if (srvtax == "Not Applicable")
+                                    {
+                                        stax = 0.00;
+                                        cgst = 0.00;
+                                        igst = 0.00;
+                                    }
+                                    else
+                                    {
+                                        stax = Convert.ToDouble(hstax.Value);
+                                        cgst = Convert.ToDouble(hcgst.Value);
+                                        igst = Convert.ToDouble(higst.Value);
+                                    }
+                                }
+                                else
+                                {
+                                    stax = 0.00;
+                                    cgst = 0.00;
+                                    igst = 0.00;
+                                    //stax = Convert.ToDouble(hstax.Value);
+                                }
+                            }
+                            else
+                            {
+                                if (srvtax == "Not Applicable")
+                                {
+                                    stax = 0.00;
+                                    cgst = 0.00;
+                                    igst = 0.00;
+                                }
+                                else
+                                {
+                                    stax = Convert.ToDouble(hstax.Value);
+                                    cgst = Convert.ToDouble(hcgst.Value);
+                                    igst = Convert.ToDouble(higst.Value);
+                                }
+                            }
+
+                        }
+                        else
+                        {
+                            if (ddltartiffcri.SelectedItem.Text == "Article Based")
+                            {
+                                stax = 0.00;
+                                cgst = 0.00;
+                                igst = 0.00;
+                            }
+                            else
+                            {
+                                stax = Convert.ToDouble(hstax.Value);
+                                cgst = Convert.ToDouble(hcgst.Value);
+                                igst = Convert.ToDouble(higst.Value);
+                            }
+
+                        }
+                    }
+                    else
+                    {
+                        stax = 0.00;
+                        cgst = 0.00;
+                        igst = 0.00;
+                    }
+                }
+                else
+                {
+                    stax = 0.00;
+                    cgst = 0.00;
+                    igst = 0.00;
+                }
+                txtservicetax.Text = stax.ToString();
+                txtcgstper.Text = cgst.ToString();
+                txtigstper.Text = igst.ToString();
+
+                if (txtSubTotal.Text == "")
+                {
+                    c = 0.00;
+                }
+                else
+                {
+                    c = Convert.ToDouble(txtSubTotal.Text);
+                }
+
+                disc = 0.00;
+                c = c - disc;
+                txtafterdisc.Text = c.ToString();
+                //discount--------------
+
+                if (txtLrcharges.Text == "")
+                {
+                    x = 0.00;
+                }
+                else
+                {
+                    x = Convert.ToDouble(txtLrcharges.Text);
+                }
+                if (txtddcharges.Text == "")
+                {
+                    y = 0.00;
+                }
+                else
+                {
+                    y = Convert.ToDouble(txtddcharges.Text);
+                }
+                if (txthmalicharges.Text == "")
+                {
+                    z = 0.00;
+                }
+
+                else
+                {
+                    z = Convert.ToDouble(txthmalicharges.Text);
+                }
+                if (txtccchrges.Text == "")
+                {
+                    n = 0.00;
+                }
+                else
+                {
+                    n = Convert.ToDouble(txtccchrges.Text);
+                }
+                if (txtdccharges.Text == "")
+                {
+
+                    d = 0.00;
+                }
+                else
+                {
+                    d = Convert.ToDouble(txtdccharges.Text);
+                }
+                if (txtsurchg.Text == "")
+                {
+                    e = 0.00;
+                }
+                else
+                {
+                    e = Convert.ToDouble(txtsurchg.Text);
+                }
+
+                if (txtwithps.Text == "")
+                {
+                    f = 0.00;
+                }
+                else
+                {
+                    f = Convert.ToDouble(txtwithps.Text);
+                }
+                if (txtstatchg.Text == "")
+                {
+                    g = 0.00;
+                }
+                else
+                {
+                    g = Convert.ToDouble(txtstatchg.Text);
+                }
+
+                if (txtartchg.Text == "")
+                {
+                    h = 0.00;
+                }
+                else
+                {
+                    h = Convert.ToDouble(txtartchg.Text);
+                }
+
+                if (txtcartage.Text == "")
+                {
+                    i = 0.00;
+                }
+                else
+                {
+                    i = Convert.ToDouble(txtcartage.Text);
+                }
+
+                if (txttranspch.Text == "")
+                {
+                    t = 0.00;
+                }
+                else
+                {
+                    t = Convert.ToDouble(txttranspch.Text);
+                }
+                if (txtlrpass.Text == "")
+                {
+                    s = 0.00;
+
+                }
+                else
+                {
+                    s = Convert.ToDouble(txtlrpass.Text);
+                }
+                if (txtvaluesurchrg.Text == "")
+                {
+
+                    v = 0.00;
+                }
+                else
+                {
+                    v = Convert.ToDouble(txtvaluesurchrg.Text);
+
+                }
+
+                if (txtPodcharges.Text == "")
+                {
+                    u = 0;
+                }
+                else
+                {
+                    u = Convert.ToDouble(txtPodcharges.Text);
+                }
+
+
+
+
+
+                Double tot = (c + x + y + z + n + d + e + f + g + h + i + t + s + v + u);
+                txtbeforestax.Text = tot.ToString();
+
+                if (Convert.ToDouble(txtbeforestax.Text) > 750)
+                {
+                    if (txtconsignorGST.Text == "" && txtconsigneeGST.Text == "")
+                    {
+                        if ((ddlLRType.SelectedItem.Text == "ON A/C"))
+                        {
+                            string customername = ddlsender.SelectedItem.Text;
+
+                            DataTable dtcustomerdet = objDataAccess.getCustomerDetailsbyname(customername);
+                            if (dtcustomerdet != null && dtcustomerdet.Rows.Count > 0)
+                            {
+                                srvtax = dtcustomerdet.Rows[0]["servicetax"].ToString();
+                                if (srvtax == "Applicable")
+                                {
+                                    txtservicetax.Text = hstax.Value;
+                                    txtcgstper.Text = hcgst.Value;
+                                    txtigstper.Text = higst.Value;
+                                }
+                                else
+                                {
+                                    txtservicetax.Text = "0";
+                                    txtcgstper.Text = "0";
+                                    txtigstper.Text = "0";
+                                }
+                            }
+                        }
+                        else
+                        {
+                            if (ddlsender.SelectedItem.Text == "Other Sender")
+                            {
+                                if (ddltartiffcri.SelectedItem.Text == "Article Based")
+                                {
+                                    txtservicetax.Text = "0";
+                                    txtcgstper.Text = "0";
+                                    txtigstper.Text = "0";
+                                }
+                                else
+                                {
+                                    txtservicetax.Text = hstax.Value;
+                                    txtcgstper.Text = hcgst.Value;
+                                    txtigstper.Text = higst.Value;
+                                }
+                            }
+                            else
+                            {
+                                if (ddltartiffcri.SelectedItem.Text == "Article Based")
+                                {
+                                    txtservicetax.Text = "0";
+                                    txtcgstper.Text = "0";
+                                    txtigstper.Text = "0";
+
+                                }
+                                else
+                                {
+                                    if (srvtax == "Applicable")
+                                    {
+                                        txtservicetax.Text = hstax.Value;
+                                        txtcgstper.Text = hcgst.Value;
+                                        txtigstper.Text = higst.Value;
+                                    }
+                                    else
+                                    {
+                                        txtservicetax.Text = "0";
+                                        txtcgstper.Text = "0";
+                                        txtigstper.Text = "0";
+                                    }
+                                }
+
+                            }
+                        }
+
+                    }
+                    else
+                    {
+                        txtservicetax.Text = "0";
+                        txtcgstper.Text = "0";
+                        txtigstper.Text = "0";
+                    }
+                }
+                Double LrWithPassCharges = 0;
+
+                if (ddllrpass.SelectedItem.Text == "Not Required")
+                {
+                    LrWithPassCharges = 0;
+                }
+                else
+                {
+                    LrWithPassCharges = Convert.ToDouble(txtlrpass.Text);
+                }
+
+                r = Convert.ToDouble(txtservicetax.Text);
+                //Double p = ((amnt) * r) / 100;
+                //p = Math.Round(p, 2);
+                //txtstaxcalc.Text = p.ToString("######.00");
+
+                Double p = ((tot) * r) / 100;
+                p = Math.Round(p, 2);
+                txtstaxcalc.Text = p.ToString("######.00");
+
+                Double cgst_P = Convert.ToDouble(txtcgstper.Text);
+                Double cgst_amt = ((tot) * cgst_P) / 100;
+                cgst_amt = Math.Round(cgst_amt, 2);
+                txtcgstamt.Text = cgst_amt.ToString("######.00");
+
+                Double igst_P = Convert.ToDouble(txtigstper.Text);
+                Double igst_amt = ((tot) * igst_P) / 100;
+                igst_amt = Math.Round(igst_amt, 2);
+                txtigstamt.Text = igst_amt.ToString("######.00");
+
+
+                Double gtotal = Convert.ToDouble(p + cgst_amt + igst_amt + tot);
+                gtotal = Math.Round(gtotal, 0);
+                txtGrandTot.Text = gtotal.ToString();
+
+            }
+            catch (Exception ex)
+            {
+                IsTrue = false;
+                AppLog.Error(ex);
+            }
+            finally { }
+
+            return IsTrue;
+        }
+
+PTP_LRCalculation(03-Sep-2018).txt
+Displaying PTP_LRCalculation(03-Sep-2018).txt.

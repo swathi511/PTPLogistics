@@ -1,0 +1,1282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/colorAshLight"
+    android:layout_width="match_parent"
+    android:id="@+id/relative_rl_layout"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/lredit_third_tv_cal"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingRight="10dp"
+                android:weightSum="2"
+                android:layout_marginTop="10dp"
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Barcodes:"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="16dp"
+                    android:textColor="#9D543F"
+                    android:layout_weight="1.5"
+                    android:gravity="left"/>
+
+                <Spinner
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:padding="6dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="0.5"
+                    android:id="@+id/lredit_third_sp_barcode"
+                    android:background="@drawable/spinner_bg"
+                    />
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:background="@drawable/ll_bg"
+                android:id="@+id/lredit_third_ll_one_layout"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/article_details"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorLoginBlue"
+                    android:layout_weight="2"
+                    android:gravity="center"/>
+                <View
+                    android:layout_width="110dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:background="@color/colorLoginBlue"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_marginTop="15dp"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Article Name:"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="15dp"
+                        android:textColor="#9D543F"
+                        android:layout_weight="2"
+                        android:gravity="left"/>
+
+                    <Spinner
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="2"
+                        android:textAlignment="center"
+                        android:id="@+id/lredit_third_sp_artcle_name_one"
+                        android:padding="2dp"
+                        android:background="@drawable/spinner_bg"
+                        />
+
+                    <EditText
+                        android:layout_width="70dp"
+                        android:id="@+id/lredit_third_et_artcle_name_one"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:visibility="gone"
+                        android:inputType="text"
+                        android:textColor="#000000"
+                        android:layout_weight="2"
+                        android:gravity="left"
+                        android:padding="4dp"
+                        android:layout_marginLeft="6dp"
+                        android:background="@drawable/bg_dark"
+                        android:maxLines="2"/>
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="64dp"
+                    android:layout_gravity="left"
+                    android:paddingRight="64dp"
+                    android:orientation="horizontal">
+
+
+                    <EditText
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/et_bg"
+                        android:gravity="center"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:layout_weight="1"
+                        android:id="@+id/lredit_third_et_artcle_other"
+                        android:hint="If Other Article"
+                        android:padding="4dp"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="#383737"
+                        android:textSize="15sp" />
+
+
+
+                    <EditText
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/et_bg"
+                        android:gravity="center"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:layout_weight="1"
+                        android:id="@+id/lredit_third_et_artcle_desc"
+                        android:hint="Article Description"
+                        android:padding="4dp"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="#383737"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="64dp"
+                    android:layout_gravity="left"
+                    android:paddingRight="64dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/et_bg"
+                        android:gravity="start"
+                        android:maxLines="1"
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:hint="Barcodes"
+                        android:id="@+id/lredit_third_tv_barcode_value_one"
+                        android:padding="4dp"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="#383737"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:layout_marginTop="15dp"
+
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Charged Wt"
+                            android:textColor="#9D543F"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:layout_marginLeft="16dp"/>
+                        <EditText
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:id="@+id/lredit_third_et_charged_wgt"
+                            android:layout_marginTop="10dp"
+                            android:padding="2dp"
+                            android:background="@drawable/et_bg"
+                            android:layout_marginLeft="16dp"
+                            android:inputType="number"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Actual Wt"
+                            android:textColor="#9D543F"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:layout_marginLeft="16dp"/>
+                        <EditText
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:id="@+id/lredit_third_et_actual_wgt"
+                            android:layout_marginTop="10dp"
+                            android:padding="2dp"
+                            android:background="@drawable/et_bg"
+                            android:layout_marginLeft="16dp"
+                            android:inputType="number"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Qty"
+                            android:textColor="#9D543F"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:layout_marginLeft="16dp"/>
+                        <EditText
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:id="@+id/lredit_third_et_quantity"
+                            android:layout_marginTop="10dp"
+                            android:padding="2dp"
+                            android:background="@drawable/et_bg"
+                            android:layout_marginLeft="16dp"
+                            android:inputType="number"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:gravity="center">
+
+                        <EditText
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_dark"
+                            android:padding="8dp"
+                            android:hint="L"
+                            android:id="@+id/lredit_third_et_length"
+                            android:textColorHint="#848383"
+                            android:textSize="15sp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/colorBlack"
+                            android:inputType="numberDecimal"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Length"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="12sp"
+                            android:layout_margin="4dp"
+                            android:gravity="center"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:gravity="center">
+
+                        <EditText
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_dark"
+                            android:padding="8dp"
+                            android:hint="W"
+                            android:id="@+id/lredit_third_et_width"
+
+                            android:textColorHint="#848383"
+                            android:textSize="15sp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/colorBlack"
+                            android:inputType="numberDecimal"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Width"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="12sp"
+                            android:layout_margin="4dp"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:gravity="center">
+
+                        <EditText
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_dark"
+                            android:padding="8dp"
+                            android:hint="H"
+                            android:textColorHint="#848383"
+                            android:textSize="15sp"
+                            android:id="@+id/lredit_third_et_height"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/colorBlack"
+                            android:inputType="numberDecimal"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Height"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="12sp"
+                            android:layout_margin="4dp"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="32dp"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add Article"
+                        android:id="@+id/lredit_third_tv_add_article"
+                        android:background="@drawable/bt_bg"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginRight="16dp"
+                        android:textSize="14sp"
+                        android:padding="10dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textAllCaps="true"
+                        android:textColor="#000000"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lredit_third_ll_two_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:visibility="gone"
+                android:background="@drawable/ll_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="2"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:text="@string/article_details"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorLoginBlue"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="110dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:background="@color/colorLoginBlue" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Article Name:"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="15dp"
+                        android:textColor="#9D543F"
+                        android:layout_weight="2"
+                        android:gravity="left"/>
+
+                    <Spinner
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="2"
+                        android:id="@+id/lredit_third_sp_artcle_name_two"
+                        android:padding="6dp"
+                        android:background="@drawable/spinner_bg"
+                        />
+
+                    <EditText
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/bg_dark"
+                        android:gravity="left"
+                        android:visibility="gone"
+                        android:id="@+id/lredit_third_et_artcle_name_two"
+                        android:inputType="text"
+                        android:maxLines="2"
+                        android:padding="4dp"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="64dp"
+                    android:layout_gravity="left"
+                    android:paddingRight="64dp"
+                    android:orientation="horizontal">
+
+
+                    <EditText
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/et_bg"
+                        android:gravity="center"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:layout_weight="1"
+                        android:id="@+id/lredit_third_et_artcle_other_one"                        android:hint="If Other Article"
+                        android:padding="4dp"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="#383737"
+                        android:textSize="15sp" />
+
+
+
+                    <EditText
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/et_bg"
+                        android:gravity="center"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:layout_weight="1"
+                        android:id="@+id/lredit_third_et_artcle_desc_two"
+                        android:hint="Article Description"
+                        android:padding="4dp"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="#383737"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="64dp"
+                    android:layout_gravity="center"
+                    android:paddingRight="64dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/et_bg"
+                        android:gravity="start"
+                        android:maxLines="1"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:hint="Barcodes"
+                        android:id="@+id/lredit_third_tv_barcode_value_two"
+                        android:padding="4dp"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="#383737"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:gravity="center"
+                            android:text="Charged Wt"
+                            android:textAlignment="center"
+                            android:textColor="#9D543F" />
+
+                        <EditText
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/et_bg"
+                            android:gravity="center"
+                            android:id="@+id/lredit_third_et_charged_wgt_two"
+                            android:inputType="number"
+                            android:padding="2dp"
+                            android:textAlignment="center"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:gravity="center"
+                            android:text="Actual Wt"
+                            android:textAlignment="center"
+                            android:textColor="#9D543F" />
+
+                        <EditText
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/et_bg"
+                            android:gravity="center"
+                            android:id="@+id/lredit_third_et_actual_wgt_two"
+                            android:inputType="number"
+                            android:padding="2dp"
+                            android:textAlignment="center"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:gravity="center"
+                            android:text="Qty"
+                            android:textAlignment="center"
+                            android:textColor="#9D543F" />
+
+                        <EditText
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/et_bg"
+                            android:gravity="center"
+                            android:id="@+id/lredit_third_et_quantity_two"
+                            android:inputType="number"
+                            android:padding="2dp"
+                            android:textAlignment="center"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_dark"
+                            android:gravity="center"
+                            android:hint="L"
+                            android:id="@+id/lredit_third_et_length_two"
+                            android:inputType="numberDecimal"
+                            android:padding="8dp"
+                            android:textColor="@color/colorBlack"
+                            android:textColorHint="#848383"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:gravity="center"
+                            android:text="Length"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_dark"
+                            android:gravity="center"
+                            android:id="@+id/lredit_third_et_width_two"
+                            android:hint="W"
+                            android:inputType="numberDecimal"
+                            android:padding="8dp"
+                            android:textColor="@color/colorBlack"
+                            android:textColorHint="#848383"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:text="Width"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_dark"
+                            android:gravity="center"
+                            android:hint="H"
+                            android:id="@+id/lredit_third_et_height_two"
+                            android:inputType="numberDecimal"
+                            android:padding="8dp"
+                            android:textColor="@color/colorBlack"
+                            android:textColorHint="#848383"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:text="Height"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="32dp"
+                    android:paddingBottom="32dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="16dp"
+                        android:id="@+id/lredit_third_tv_add_article_two"
+                        android:background="@drawable/bt_bg"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Add Article"
+                        android:textAllCaps="true"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lredit_third_ll_three_layout"
+                android:layout_margin="5dp"
+                android:visibility="gone"
+                android:background="@drawable/ll_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/article_details"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorLoginBlue"
+                    android:layout_weight="2"
+                    android:gravity="center"/>
+                <View
+                    android:layout_width="110dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:background="@color/colorLoginBlue"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_marginTop="15dp"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Article Name:"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="15dp"
+                        android:textColor="#9D543F"
+                        android:layout_weight="2"
+                        android:gravity="left"/>
+
+                    <Spinner
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="2"
+                        android:id="@+id/lredit_third_sp_artcle_name_three"
+                        android:padding="6dp"
+                        android:background="@drawable/spinner_bg"
+                        />
+
+                    <EditText
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:inputType="text"
+                        android:visibility="gone"
+                        android:textColor="#000000"
+                        android:layout_weight="2"
+                        android:id="@+id/lredit_third_et_artcle_name_three"
+                        android:gravity="left"
+                        android:padding="4dp"
+                        android:layout_marginLeft="6dp"
+                        android:background="@drawable/bg_dark"
+                        android:maxLines="2"/>
+
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="64dp"
+                    android:layout_gravity="left"
+                    android:paddingRight="64dp"
+                    android:orientation="horizontal">
+
+
+                    <EditText
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/et_bg"
+                        android:gravity="center"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:layout_weight="1"
+                        android:id="@+id/lredit_third_et_artcle_other_two"                        android:padding="4dp"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="#383737"
+                        android:textSize="15sp" />
+
+
+
+                    <EditText
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/et_bg"
+                        android:gravity="center"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:layout_weight="1"
+                        android:id="@+id/lredit_third_et_artcle_desc_three"
+                        android:hint="Article Description"
+                        android:padding="4dp"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="#383737"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="64dp"
+                    android:layout_gravity="center"
+                    android:paddingRight="64dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/et_bg"
+                        android:gravity="start"
+                        android:maxLines="1"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:hint="Barcodes"
+                        android:id="@+id/lredit_third_tv_barcode_value_three"
+                        android:padding="4dp"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="#383737"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:layout_marginTop="15dp"
+                    android:paddingBottom="32dp"
+
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Charged Wt"
+                            android:textColor="#9D543F"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:layout_marginLeft="16dp"/>
+                        <EditText
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:id="@+id/lredit_third_et_charged_wgt_three"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:padding="2dp"
+                            android:background="@drawable/et_bg"
+                            android:layout_marginLeft="16dp"
+                            android:inputType="number"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Actual Wt"
+                            android:textColor="#9D543F"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:layout_marginLeft="16dp"/>
+                        <EditText
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:id="@+id/lredit_third_et_actual_wgt_three"
+                            android:layout_marginTop="10dp"
+                            android:padding="2dp"
+                            android:background="@drawable/et_bg"
+                            android:layout_marginLeft="16dp"
+                            android:inputType="number"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Qty"
+                            android:textColor="#9D543F"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:layout_marginLeft="16dp"/>
+                        <EditText
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:id="@+id/lredit_third_et_quantity_three"
+                            android:layout_marginTop="10dp"
+                            android:padding="2dp"
+                            android:background="@drawable/et_bg"
+                            android:layout_marginLeft="16dp"
+                            android:inputType="number"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:gravity="center">
+
+                        <EditText
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_dark"
+                            android:padding="8dp"
+                            android:hint="L"
+                            android:id="@+id/lredit_third_et_length_three"
+                            android:textColorHint="#848383"
+                            android:textSize="15sp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/colorBlack"
+                            android:inputType="numberDecimal"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Length"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="12sp"
+                            android:layout_margin="4dp"
+                            android:gravity="center"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:gravity="center">
+
+                        <EditText
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_dark"
+                            android:padding="8dp"
+                            android:hint="W"
+                            android:id="@+id/lredit_third_et_width_three"
+                            android:textColorHint="#848383"
+                            android:textSize="15sp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/colorBlack"
+                            android:inputType="numberDecimal"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Width"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="12sp"
+                            android:layout_margin="4dp"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="12dp"
+                        android:visibility="gone"
+                        android:layout_marginRight="12dp"
+                        android:gravity="center">
+
+                        <EditText
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_dark"
+                            android:padding="8dp"
+                            android:hint="H"
+                            android:id="@+id/lredit_third_et_height_three"
+                            android:textColorHint="#848383"
+                            android:textSize="15sp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/colorBlack"
+                            android:inputType="numberDecimal"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Height"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="12sp"
+                            android:layout_margin="4dp"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="right"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bt_bg"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="right"
+        android:id="@+id/lredit_third_tv_cal"
+        android:padding="10dp"
+        android:text="Calculate"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:id="@+id/lredit_ll">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bt_bg"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="right"
+            android:id="@+id/lredit_third_tv_edit"
+            android:padding="10dp"
+            android:text="Edit"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bt_bg"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="right"
+            android:id="@+id/lredit_third_tv_next"
+            android:padding="10dp"
+            android:text="Next"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

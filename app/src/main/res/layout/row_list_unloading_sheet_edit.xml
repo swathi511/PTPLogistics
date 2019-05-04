@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/row_list_use_cb"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorBlack"
+                    android:textAllCaps="false"
+                    android:text="LR No:"
+                    android:gravity="left"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="4dp"
+                    android:hint="B01/A/TP/18/00001"
+                    android:id="@+id/row_list_use_tv_lr_no"
+                    android:textColor="@color/colorLoginBlue"
+                    android:gravity="center"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorBlack"
+                    android:textAllCaps="false"
+                    android:layout_marginLeft="6dp"
+                    android:text="To Branch:"
+                    android:gravity="right"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/colorLoginBlue"
+                    android:hint="Hassan"
+                    android:id="@+id/row_list_use_tv_to_branch"
+
+                    android:gravity="right"/>
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="left"
+                android:paddingTop="6dp"
+                android:layout_marginTop="6dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorBlack"
+                    android:textAllCaps="false"
+                    android:text="TotalRec Qty."
+                    android:gravity="left"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="4dp"
+                    android:hint="2018"
+                    android:id="@+id/row_list_use_tv_tol_qty"
+
+                    android:layout_weight="1"
+                    android:textColor="@color/colorLoginBlue"
+                    android:gravity="left"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorBlack"
+                    android:textAllCaps="false"
+                    android:layout_marginLeft="6dp"
+                    android:text="NewRec Qty."
+                    android:gravity="right"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorLoginBlue"
+                    android:hint="43"
+                    android:id="@+id/row_list_use_tv_newrec_qty"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="1"
+                    android:gravity="left"/>
+
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/ss_rlayout"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ss_alt_llayout"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LR No :"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="38dp"
+                    android:padding="4dp"
+                    android:inputType="text"
+                    android:id="@+id/lr_shipping_status_et_lr_no"
+                    android:background="@drawable/login_bg"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                android:paddingRight="32dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="14dp"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Show Details"
+                    android:id="@+id/lr_shipping_status_tv_show_details"
+                    android:background="@drawable/bt_bg"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginRight="16dp"
+                    android:textSize="14sp"
+                    android:padding="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAllCaps="true"
+                    android:textColor="#000000" />
+
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Home "
+                    android:id="@+id/lr_shipping_status_tv_home"
+
+                    android:background="@drawable/bt_bg"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginRight="16dp"
+                    android:textSize="14sp"
+                    android:padding="10dp"
+                    android:textColor="#000000"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAllCaps="true"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:id="@+id/ll_ll1"
+                android:gravity="left"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="From Location:"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:padding="2dp"
+                        android:id="@+id/lr_shipping_status_tv_from_loc"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:textColor="#5b97ea"
+                        android:hint=""
+                        android:textStyle="bold"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="To Location:"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="#5b97ea"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="4dp"
+                        android:hint=" "
+                        android:id="@+id/lr_shipping_status_tv_to_loc"
+                        android:textStyle="bold"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_ll2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="left"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loading No. "
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:padding="2dp"
+                    android:id="@+id/lr_shipping_status_tv_loading_no"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="1"
+                    android:textColor="#5b97ea"
+                    android:hint=" "
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vehicle No."
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="#5b97ea"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="4dp"
+                    android:hint=" "
+                    android:id="@+id/lr_shipping_status_tv_vehicle_no"
+
+                    android:textStyle="bold"
+                    />
+            </LinearLayout>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/colorBlack"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/lr_shipping_status_rView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>
+    <!--<LinearLayout android:id="@+id/alt_ll3"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/alt_ll2"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="8dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingRight="12dp"
+            android:paddingLeft="12dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                &lt;!&ndash;<ImageView android:id="@+id/alt_iv1"&ndash;&gt;
+                    &lt;!&ndash;android:layout_width="24dp"&ndash;&gt;
+                    &lt;!&ndash;android:layout_height="24dp"&ndash;&gt;
+                    &lt;!&ndash;android:src="@drawable/tick_disabled"&ndash;&gt;
+                    &lt;!&ndash;android:layout_gravity="center" />&ndash;&gt;
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="LR Status:"
+                        android:textColor="@color/colorBlack"
+                        android:gravity="left"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="4dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:hint="Hyderbad-secunderbad"
+                            android:textColor="@color/colorLoginBlue"
+                            android:gravity="left"
+                            android:id="@+id/lr_shipping_status_tv_lr_status_one"
+
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="4dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:text="Date:"
+                            android:textColor="@color/colorBlack"
+                            android:gravity="left"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginTop="4dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:hint="10/12/2018"
+                            android:id="@+id/lr_shipping_status_tv_date_one"
+                            android:textColor="@color/colorLoginBlue"
+                            android:gravity="left"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="4dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:text="Time:"
+                            android:textColor="@color/colorBlack"
+                            android:gravity="left"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginTop="4dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:hint="13:02:28hrs"
+                            android:id="@+id/lr_shipping_status_tv_time_one"
+                            android:textColor="@color/colorLoginBlue"
+                            android:gravity="left"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="4dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="@color/colorAccent"
+            />
+
+    </LinearLayout>-->
+    <!--<LinearLayout android:id="@+id/alt_ll4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_below="@+id/alt_ll3"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                &lt;!&ndash;<ImageView android:id="@+id/alt_iv1"&ndash;&gt;
+                &lt;!&ndash;android:layout_width="24dp"&ndash;&gt;
+                &lt;!&ndash;android:layout_height="24dp"&ndash;&gt;
+                &lt;!&ndash;android:src="@drawable/tick_disabled"&ndash;&gt;
+                &lt;!&ndash;android:layout_gravity="center" />&ndash;&gt;
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:text="LR Status:"
+                            android:textColor="@color/colorBlack"
+                            android:gravity="left"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginTop="4dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:hint="Hyderbad-secunderbad"
+                            android:id="@+id/lr_shipping_status_tv_lr_status_two"
+                            android:textColor="@color/colorLoginBlue"
+                            android:gravity="left"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="4dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:text="Date:"
+                            android:textColor="@color/colorBlack"
+                            android:gravity="left"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginTop="4dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:hint="10/12/2018"
+                            android:id="@+id/lr_shipping_status_tv_date_two"
+
+                            android:textColor="@color/colorLoginBlue"
+                            android:gravity="left"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="4dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:text="Time:"
+                            android:textColor="@color/colorBlack"
+                            android:gravity="left"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginTop="4dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:hint="13:02:28hrs"
+                            android:id="@+id/lr_shipping_status_tv_time_two"
+                            android:textColor="@color/colorLoginBlue"
+                            android:gravity="left"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="4dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="@color/colorAccent"
+            />
+
+    </LinearLayout>
+    <LinearLayout android:id="@+id/alt_ll5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_below="@+id/alt_ll4"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                &lt;!&ndash;<ImageView android:id="@+id/alt_iv1"&ndash;&gt;
+                &lt;!&ndash;android:layout_width="24dp"&ndash;&gt;
+                &lt;!&ndash;android:layout_height="24dp"&ndash;&gt;
+                &lt;!&ndash;android:src="@drawable/tick_disabled"&ndash;&gt;
+                &lt;!&ndash;android:layout_gravity="center" />&ndash;&gt;
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:text="LR Status:"
+                            android:textColor="@color/colorBlack"
+                            android:gravity="left"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginTop="4dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:hint="Hyderbad-secunderbad"
+                            android:id="@+id/lr_shipping_status_tv_lr_status_three"
+
+
+                            android:textColor="@color/colorLoginBlue"
+                            android:gravity="left"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="4dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:text="Date:"
+                            android:textColor="@color/colorBlack"
+                            android:gravity="left"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginTop="4dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:hint="10/12/2018"
+                            android:id="@+id/lr_shipping_status_tv_date_three"
+
+                            android:textColor="@color/colorLoginBlue"
+                            android:gravity="left"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="4dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:text="Time:"
+                            android:textColor="@color/colorBlack"
+                            android:gravity="left"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginTop="4dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:hint="13:02:28hrs"
+                            android:id="@+id/lr_shipping_status_tv_time_three"
+                            android:textColor="@color/colorLoginBlue"
+                            android:gravity="left"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="4dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="@color/colorAccent"
+            />
+
+    </LinearLayout>
+    <LinearLayout android:id="@+id/alt_ll6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_below="@+id/alt_ll5"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                &lt;!&ndash;<ImageView android:id="@+id/alt_iv1"&ndash;&gt;
+                &lt;!&ndash;android:layout_width="24dp"&ndash;&gt;
+                &lt;!&ndash;android:layout_height="24dp"&ndash;&gt;
+                &lt;!&ndash;android:src="@drawable/tick_disabled"&ndash;&gt;
+                &lt;!&ndash;android:layout_gravity="center" />&ndash;&gt;
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:text="LR Status:"
+                            android:textColor="@color/colorBlack"
+                            android:gravity="left"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginTop="4dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:hint="Hyderbad-secunderbad"
+                            android:id="@+id/lr_shipping_status_tv_lr_status_four"
+
+                            android:textColor="@color/colorLoginBlue"
+                            android:gravity="left"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="4dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:text="Date:"
+                            android:textColor="@color/colorBlack"
+                            android:gravity="left"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginTop="4dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:hint="10/12/2018"
+                            android:id="@+id/lr_shipping_status_tv_date_four"
+
+                            android:textColor="@color/colorLoginBlue"
+                            android:gravity="left"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="4dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:text="Time:"
+                            android:textColor="@color/colorBlack"
+                            android:gravity="left"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginTop="4dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:hint="13:02:28hrs"
+                            android:id="@+id/lr_shipping_status_tv_time_four"
+
+                            android:textColor="@color/colorLoginBlue"
+                            android:gravity="left"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="4dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="@color/colorAccent"
+            />
+
+    </LinearLayout>
+</LinearLayout>-->
+

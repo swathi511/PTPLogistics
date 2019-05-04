@@ -1,0 +1,188 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:id="@+id/ll_rlayout"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/ll_ll1"
+        android:gravity="left">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Article "
+            android:textSize="12sp"
+            android:textColor="@color/colorBlack"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:padding="2dp"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:textColor="#5b97ea"
+            android:hint="xxxxx"
+            android:id="@+id/row_list_status_tv_article"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Act. wt."
+            android:textSize="12sp"
+            android:textColor="@color/colorBlack"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#5b97ea"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"
+            android:hint="xxxx"
+            android:id="@+id/row_list_status_tv_act_wt"
+
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chd. wt."
+            android:textSize="12sp"
+            android:textColor="@color/colorBlack"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#5b97ea"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"
+            android:hint="xxxx"
+            android:id="@+id/row_list_status_tv_chd_wt"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Qty."
+            android:textSize="12sp"
+            android:textColor="@color/colorBlack"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#5b97ea"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"
+            android:hint="xxxx"
+            android:id="@+id/row_list_status_tv_qty"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_ll1"
+        android:layout_marginTop="6dp"
+        android:gravity="left"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rate(kg\item):"
+            android:textColor="@color/colorBlack"
+            android:textSize="12sp"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:hint="xxxx"
+            android:id="@+id/row_list_status_tv_rate"
+            android:background="@drawable/et_bg"
+            android:textColor="#5b97ea"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount:"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:hint="xxxx"
+            android:id="@+id/row_list_status_tv_amount"
+            android:textColor="#5b97ea"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Final Amount:"
+            android:textColor="@color/colorBlack"
+            android:textSize="12sp" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:hint="xxxx"
+            android:id="@+id/row_list_status_tv_final_amt"
+            android:background="@drawable/et_bg"
+            android:textColor="#5b97ea"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/ll_ll3"
+        android:layout_marginRight="20dp"
+        android:gravity="right"
+        android:layout_below="@+id/ll_ll2"
+        android:layout_marginTop="6dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select"
+            android:background="@drawable/bt_bg"
+            android:textSize="12sp"
+            android:id="@+id/row_list_status_tv_select"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/colorBlack"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/TextView_ref"
+            android:text="Delete"
+            android:textSize="12sp"
+            android:id="@+id/row_list_status_tv_delete"
+            android:background="@drawable/bt_bg"
+            android:textColor="@color/colorBlack"
+            />
+
+    </LinearLayout>
+</RelativeLayout>
